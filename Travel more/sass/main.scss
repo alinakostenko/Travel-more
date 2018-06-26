@@ -33,11 +33,14 @@ button {
   line-height: 26px;
   text-transform: uppercase;
   letter-spacing: 1.2px;
+
+  &:hover {
+    background-color: lighten($blue, 7%);
+  }
 }
 
 .container {
-  margin-left: $container-indent;
-  margin-right: $container-indent;
+  margin: 0 17.6%;
 }
 
 header {
@@ -97,12 +100,10 @@ header {
         position: relative;
         float: right;
         border: 2px solid #fff;
-        background-color: $blue;
         width: 23%;
         height: 100%;
         text-align: left;
         padding-left: 36px;
-        font-family: Aleo, sans-serif;
         font-size: 14px;
         letter-spacing: 1.4px;
 
@@ -170,11 +171,15 @@ header {
       &:last-child {
         margin-right: 0;
       }
+
+      &:hover {
+        border-bottom: 1px solid #fff;
+      }
     }
   }
 }
 
-.main_1 {
+.main_1_choose {
   max-height: 685px;
   background: url("../images/bg_main.png") no-repeat;
   background-size: cover;
@@ -222,49 +227,58 @@ header {
   }
 }
 
-.main_2 {
+.main_2_search_places {
   background-color: #333;
   max-height: 337px;
 
   .container {
     padding-top: 120px;
-    padding-bottom: 119px;
+    padding-bottom: 89px;
     position: relative;
     @include flexbox();
     @include justify-content($value: space-between);
     @include align-items(center);
-    margin-right: 20%;
-    margin-left: 20%;
+    margin-right: 23%;
+    margin-left: 23%;
 
-    .line {
-      top: 43px;
-      left: 148px;
-      position: absolute;
+    .select {
+      &:before {
+        content: url("../images/line.png");
+        position: absolute;
+        top: 53px;
+        left: 133px;
+      }
+
+      &:after {
+        content: url("../images/line.png");
+        position: absolute;
+        top: 51px;
+        right: 140px;
+      }
     }
 
     img {
       display: block;
-      margin: 0 auto 34px;
+      margin: 0 auto 26px;
     }
 
-    p {
+    h2 {
       color: #e8e8e8;
       font-family: Aleo, sans-serif;
       font-size: 36px;
       font-weight: 400;
-      line-height: 26px;
     }
   }
 }
 
-.main_3, .main_4 {
+.main_3_spain, .main_4_spain {
   max-height: 700px;
   background: url("../images/bg_main2.png") no-repeat;
   background-size: cover;
 
   .container {
     padding-top: 210px;
-    padding-bottom: 100px;
+    padding-bottom: 92px;
 
     .black_area {
       padding: 50px 30px;
@@ -310,7 +324,7 @@ header {
   }
 }
 
-.main_4 {
+.main_4_spain {
   background: url("../images/bg_main3.png") no-repeat;
   background-size: cover;
 
@@ -319,7 +333,7 @@ header {
   }
 }
 
-.main_5 {
+.main_5_tourist {
   max-height: 730px;
   background: url("../images/bg_main4.png") no-repeat;
   background-size: cover;
@@ -371,7 +385,7 @@ header {
       font-family: "Josefin Sans", sans-serif;
       font-size: 16px;
       font-weight: 400;
-      line-height: 26px;
+      line-height: 24px;
       }
     }
   }
